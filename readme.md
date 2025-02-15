@@ -33,6 +33,7 @@ cd tu_proyecto
   ```sh
   python -m venv venv_tesis
   venv_tesis\Scripts\activate
+  para desactivarlo: deactivate
   ```
 - **Mac/Linux**:
   ```sh
