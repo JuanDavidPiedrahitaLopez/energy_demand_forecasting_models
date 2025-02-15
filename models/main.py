@@ -1,0 +1,1 @@
+print("entorno: venv_tesis")
