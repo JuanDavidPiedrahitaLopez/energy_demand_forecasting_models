@@ -1,20 +1,24 @@
 # 📊 Predicción de Series Temporales con ML y DL
 
-Este repositorio contiene la implementación de modelos de **Machine Learning (ML)** y **Deep Learning (DL)** para la predicción de series temporales. Se utilizan modelos como **ARIMA, Prophet, XGBoost, Redes Neuronales (LSTM, GRU) y TimeGPT**, con integración de **PySpark y Apache** para el manejo de grandes volúmenes de datos.
+Este repositorio contiene la implementación de modelos de **Machine Learning (ML)** y **Deep Learning (DL)** para la predicción de series temporales. Se utilizan modelos como **ARIMA-GARCH, Prophet, XGBoost, Redes Recurrentes y NeuralProphet**, junto con criterios de hibridación asociados a las predicciones híbridas.
 
 ## 📁 Estructura del Proyecto
 
 ```
-📂 tu_proyecto/
-│── 📂 src/               # Código fuente (scripts y módulos)
+📂 data/
+│── 📂 best_parameters/   # Conjunto de mejores hiperparámetros asociados a cada modelo
+│── 📂 csv/               # archivos csv que contienen los datos por divisa
+│    ├── Carga de datos Lakehouse.ipynb # creación de tablas (dataframes / tablas delta)
+📂 models/
+│── 📂 notebooks/         # Código fuente (notebooks asociados a cada modelo)
 │    ├── main.py          # Script principal
-│    ├── utils.py         # Funciones auxiliares
-│── 📂 notebooks/         # Jupyter notebooks (si usas)
-│── 📂 data/              # Datos crudos o de entrada (opcional)
-│── 📂 models/            # Modelos entrenados (si decides guardarlos)
+📂 src/
+│    ├── main.py
+📂 utils/                # funciones adicionales
+│    ├── functions.py
 │── .gitignore            # Ignorar archivos innecesarios
 │── requirements.txt      # Lista de dependencias
-│── README.md             # Documentación del proyecto
+│── readme.md             # Documentación del proyecto
 
 ```
 
@@ -47,41 +51,16 @@ cd tu_proyecto
 pip install -r requirements.txt
 ```
 
-## 📊 Uso del Proyecto
-
-### 🔹 **Ejecutar el código principal**
-
-```sh
-python src/main.py
-```
-
-### 🔹 **Ejecutar un notebook Jupyter**
-
-```sh
-jupyter notebook
-```
-
 ## 📦 Dependencias
 
 Este proyecto usa las siguientes librerías principales:
 
 - **Manipulación de datos**: `pandas`, `numpy`
-- **Machine Learning**: `scikit-learn`, `xgboost`, `lightgbm`, `catboost`
+- **Machine Learning**: `scikit-learn`, `xgboost`
 - **Deep Learning**: `tensorflow`, `keras`, `torch`
-- **Series Temporales**: `statsmodels`, `prophet`, `pmdarima`, `sktime`
-- **Big Data**: `pyspark`, `apache-airflow`
-- **Datos financieros**: `yfinance`, `pandas-datareader`, `alpha_vantage`
-- **Seguimiento de experimentos**: `mlflow`, `optuna`
-
-## 🛠 Contribución
-
-Si deseas contribuir al proyecto:
-
-1. **Haz un fork** del repositorio.
-2. **Crea una nueva rama** con tu cambio (`git checkout -b nueva_funcionalidad`).
-3. **Realiza un commit** (`git commit -m "Descripción del cambio"`).
-4. **Haz push a la rama** (`git push origin nueva_funcionalidad`).
-5. **Abre un Pull Request**.
+- **Series Temporales**: `statsmodels`, `neuralprophet`, `pmdarima`, `sktime`
+- **Datos financieros**: `yfinance`
+- **Seguimiento de experimentos**: `optuna`
 
 ## 📜 Licencia
 
