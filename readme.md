@@ -6,12 +6,16 @@ Este repositorio contiene la implementación de modelos de **Machine Learning (M
 
 ```
 📂 data/
-│── 📂 best_parameters/   # Conjunto de mejores hiperparámetros asociados a cada modelo
-│── 📂 csv/               # archivos csv que contienen los datos por divisa
+│── 📂 best_train_models/     # Conjunto de mejores hiperparámetros asociados a cada modelo
+│── 📂 csv/                   # archivos csv que contienen los datos relacionados con la demanda de consumo
+│── 📂 Excel/                 # archivos excel datos demanda
+│── 📂 preds_energy_models/   # predicciones por modelo
 │    ├── Carga de datos Lakehouse.ipynb # creación de tablas (dataframes / tablas delta)
+│    ├── preprocessing.ipynb   # transformaciones previas
 📂 models/
-│── 📂 notebooks/         # Código fuente (notebooks asociados a cada modelo)
-│    ├── main.py          # Script principal
+│── 📂 notebooks/         # Modelos
+     │──📂 Energy/        # Aplicación modelos (entrenamiento y test)
+│    ├── main.py           # Script principal
 📂 src/
 │    ├── main.py
 📂 utils/                # funciones adicionales
